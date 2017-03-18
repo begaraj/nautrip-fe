@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
     <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block;"> 
         <Menu-item key="1" >
