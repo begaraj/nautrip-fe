@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueResource from 'vue-resource';
@@ -12,6 +11,7 @@ import * as GoogleMap from 'vue2-google-maps';
 
 var googleMapApiKey = 'AIzaSyAGT9DujTwO_A8R8y80W5RDU9TL_CRAAmg';
 
+Vue.use(VueCharts);
 Vue.use(GoogleMap, {
     load: {
       key: googleMapApiKey,
