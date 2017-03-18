@@ -4,16 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import VueResource from 'vue-resource';
 
 import Form from 'iview/src/components/form';
-import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 Vue.use(iView);
-
 
 Vue.config.productionTip = false
 

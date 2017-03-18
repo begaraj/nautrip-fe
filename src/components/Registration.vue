@@ -1,6 +1,5 @@
 <template>
-  <div class="center">
-  <Row>
+  <Row type="flex" justify="center">
        <i-col span="8">
 
        <i-form :model="formItem" :label-width="80">
@@ -20,7 +19,7 @@
             <i-input v-model="formItem.location" placeholder="Location"></i-input>
         </Form-item>
         <Form-item>
-            <i-select v-model="formItem.payment" placeholder="Choose payment method">
+            <i-select v-model="payment" placeholder="Choose payment method">
                 <i-option value="Credit Card">Credit Card</i-option>
                 <i-option value="PayPal">PayPal</i-option>
                 <i-option value="SOFORT">SOFORT</i-option>
@@ -35,20 +34,24 @@
 
     </i-col>
   </Row>
-</div>
 </template>
 <script>
+
+import apiService from '../services/api.service';
+
     export default {
         data () {
             return {
-                formItem: {}
+                formItem: {},
+                payment: ''
             }
         },
         methods: {
           signIn() {
             console.log(this.formItem);
-            console.log(this.api);
-            //$this.http.get()
+            apiService.post(this.formItem, 'profiles').then(response => {
+              console.log(response);
+            });
           }
         }
     }
