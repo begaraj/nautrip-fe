@@ -1,5 +1,5 @@
 import Vue from 'vue';
-var url = '//localhost:3000/api/';
+var url = '//127.0.0.1:3000/api/';
 export default {
 
   get(endpoint) {

@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block;"> 
-        <Menu-item key="1" >
+    <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block; position:absolute; bottom:0;"> 
+        <Menu-item key="1" name="menuItem" >
             <Icon size="20" type="android-more-vertical"></Icon>
             My Timeline
         </Menu-item>
-        <Menu-item key="2">
+        <Menu-item key="2" name="menuItem">
             <Icon size="20" type="ios-people"></Icon>
             Travelers
         </Menu-item>
-        <Menu-item key="3">
+        <Menu-item key="3" name="menuItem">
             <Icon size="20" type="arrow-graph-up-right"></Icon>
             Trending Travels
         </Menu-item>
-        <Menu-item key="4">
+        <Menu-item key="4" name="menuItem">
             <Icon size="20" type="map"></Icon>
             Nearby
         </Menu-item>
-        <Menu-item key="5">
+        <Menu-item key="5" name="menuItem">
             <Icon size="20" type="person"></Icon>
             My Profile
         </Menu-item>
