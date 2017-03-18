@@ -30,7 +30,8 @@
           <chartjs-line
           :labels="['november', 'december', 'january','february','march', 'april']"
           :data="[8,10,20,14,20, 24]" :width="400" :height="200"
-          :options="{legend: {display: false}}"></chartjs-line>
+          :datalabel="'Popularity'"
+          :fill="true"></chartjs-line>
         </div>
       </i-col>
     </Row>
