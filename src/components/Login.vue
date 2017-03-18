@@ -1,6 +1,6 @@
 
 <template>
-    <i-form v-ref:form-inline :model="formInline" :rules="ruleInline" inline>
+    <i-form ref:form-inline :model="formInline" :rules="ruleInline" inline>
         <Form-item prop="user">
             <i-input type="text" :value.sync="formInline.user" placeholder="Username">
                 <Icon type="ios-person-outline" slot="prepend"></Icon>
@@ -12,13 +12,11 @@
             </i-input>
         </Form-item>
         <Form-item>
-            <i-button type="primary" @click="handleSubmit('formInline')">登录</i-button>
+            <i-button type="primary" @click="handleSubmit('formInline')">Log in</i-button>
         </Form-item>
     </i-form>
 </template>
 <script>
-
-import Form from 'iview/src/components/form';
 
     export default {
         data () {
@@ -29,11 +27,11 @@ import Form from 'iview/src/components/form';
                 },
                 ruleInline: {
                     user: [
-                        { required: true, message: '请填写用户名', trigger: 'blur' }
+                        { required: true, message: 'please enter username', trigger: 'blur' }
                     ],
                     password: [
-                        { required: true, message: '请填写密码', trigger: 'blur' },
-                        { type: 'string', min: 6, message: '密码长度不能小于6位', trigger: 'blur' }
+                        { required: true, message: 'pleas enter passwort', trigger: 'blur' },
+                        { type: 'string', min: 6, message: 'passwort has to be min 6 characketrs', trigger: 'blur' }
                     ]
                 }
             }
@@ -42,9 +40,9 @@ import Form from 'iview/src/components/form';
             handleSubmit(name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
-                        this.$Message.success('提交成功!');
+                        this.$Message.success('you are logged in!');
                     } else {
-                        this.$Message.error('表单验证失败!');
+                        this.$Message.error('please check your email and password!');
                     }
                 })
             }
