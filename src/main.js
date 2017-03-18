@@ -9,7 +9,9 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 
 import Form from 'iview/src/components/form';
+import VueResource from 'vue-resource';
 
+Vue.use(VueResource);
 Vue.use(iView);
 
 
@@ -22,4 +24,3 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
-
