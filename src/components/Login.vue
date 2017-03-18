@@ -1,20 +1,22 @@
 
 <template>
-    <i-form ref:form-inline :model="formInline" :rules="ruleInline" inline>
-        <Form-item prop="user">
-            <i-input type="text" :value.sync="formInline.user" placeholder="Username">
-                <Icon type="ios-person-outline" slot="prepend"></Icon>
-            </i-input>
-        </Form-item>
-        <Form-item prop="password">
-            <i-input type="password" :value.sync="formInline.password" placeholder="Password">
-                <Icon type="ios-locked-outline" slot="prepend"></Icon>
-            </i-input>
-        </Form-item>
-        <Form-item>
-            <i-button type="primary" @click="handleSubmit('formInline')">Log in</i-button>
-        </Form-item>
-    </i-form>
+    <row type="flex" justify="center">
+        <i-form ref:form-inline :model="formInline" :rules="ruleInline" inline>
+            <Form-item prop="user">
+                <i-input type="text" :value.sync="formInline.user" placeholder="Username">
+                    <Icon type="ios-person-outline" slot="prepend"></Icon>
+                </i-input>
+            </Form-item>
+            <Form-item prop="password">
+                <i-input type="password" :value.sync="formInline.password" placeholder="Password">
+                    <Icon type="ios-locked-outline" slot="prepend"></Icon>
+                </i-input>
+            </Form-item>
+            <Form-item>
+                <i-button type="primary" @click="handleSubmit('formInline')">Log in</i-button>
+            </Form-item>
+        </i-form>
+    </row>
 </template>
 <script>
 

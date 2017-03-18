@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Login from '@/components/Login'
 import Registration from '@/components/Registration'
+import MyTimeline from '@/components/MyTimeline'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/registration',
       name: 'Registration',
       component: Registration
+    },
+    {
+      path: '/my-timeline',
+      name: 'MyTimeline',
+      component: MyTimeline
     }
   ]
 })
