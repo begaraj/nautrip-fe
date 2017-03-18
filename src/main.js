@@ -8,7 +8,15 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueResource from 'vue-resource';
 import Form from 'iview/src/components/form';
+import * as GoogleMap from 'vue2-google-maps';
 
+var googleMapApiKey = 'AIzaSyAGT9DujTwO_A8R8y80W5RDU9TL_CRAAmg';
+
+Vue.use(GoogleMap, {
+    load: {
+      key: googleMapApiKey,
+    }
+  });
 Vue.use(VueResource);
 Vue.use(iView);
 

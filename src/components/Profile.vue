@@ -15,8 +15,18 @@
         </i-col>
     </Row>
 
-    <Row type="flex" justify="center" align="middle">
-    
+    <Row type="flex" justify="center">
+      <i-col span="4">
+      <gmap-map
+        :center="{lat:10, lng:10}"
+        :zoom="7"
+        map-type-id="roadmap"
+        style="width: 500px; height: 300px">
+      </gmap-map>
+      </i-col>
+      <i-col span="9">
+        <h3>My points: 400</h3> <!--TODO: fetch points from DB, add icon -->
+      </i-col>
     </Row>
 
   </div>
