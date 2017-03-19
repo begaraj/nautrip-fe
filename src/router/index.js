@@ -6,6 +6,7 @@ import Registration from '@/components/Registration'
 import MyTimeline from '@/components/MyTimeline'
 import Profile from '@/components/Profile'
 import CreatePost from '@/components/CreatePost'
+import BookTrip from '@/components/BookTrip'
 
 Vue.use(Router);
 
@@ -40,6 +41,12 @@ export default new Router({
       path: '/create-post',
       name: 'CreatePost',
       component: CreatePost
+    },
+    {
+      path: '/book-trip',
+      name: 'BookTrip',
+      component: BookTrip
     }
+
   ]
 })
