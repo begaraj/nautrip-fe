@@ -4,11 +4,10 @@
     <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block; position:relative; bottom:0;">
         <Menu-item key="1" name="menuItem" >
             <Icon size="20" type="android-more-vertical"></Icon>
-            My Timeline
+            <router-link to="/my-timeline">Recomended</router-link>
         </Menu-item>
         <Menu-item key="2" name="menuItem">
             <Icon size="20" type="ios-people"></Icon>
-            Travelers
         </Menu-item>
         <Menu-item key="3" name="menuItem">
             <Icon size="20" type="arrow-graph-up-right"></Icon>
@@ -20,7 +19,7 @@
         </Menu-item>
         <Menu-item key="5" name="menuItem">
             <Icon size="20" type="person"></Icon>
-            My Profile
+          <router-link to="/profile">My Profile</router-link>
         </Menu-item>
     </Menu>
   </div>

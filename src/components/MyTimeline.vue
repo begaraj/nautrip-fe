@@ -2,6 +2,20 @@
 
    <div style="background:#eee;padding: 20px">
         <Card v-for="post in posts" :key="post.id" :bordered="false">
+            <Carousel>
+              <Carousel-item>
+                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
+              </Carousel-item>
+              <Carousel-item>
+                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
+              </Carousel-item>
+              <Carousel-item>
+                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
+              </Carousel-item>
+              <Carousel-item>
+                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
+              </Carousel-item>
+            </Carousel>
             <h3 slot="title">Post Title</h3>
             <img src="" />
             <span class="user"><Icon type="person"></Icon> Username</span><br>
