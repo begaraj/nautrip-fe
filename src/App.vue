@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <Menu mode="horizontal" :theme="dark" active-key="1">
-      
+    <Menu mode="horizontal" active-key="1">
+
       <router-link to="/create-post">
-        <Menu-item key="1">
+        <Menu-item key="1" name="newExperience">
           <Icon type="plus-round"></Icon>
           Create new experience
         </Menu-item>
       </router-link>
       <router-link to="/profile">
-        <Menu-item key="2">
+        <Menu-item key="2" name="myProfile">
           <Icon size="20" type="person"></Icon>
           My Profile
         </Menu-item>
@@ -44,7 +44,9 @@ export default {
   name: 'app',
   data () {
             return {
-                theme1: 'primary'
+                theme1: 'primary',
+                theme2: 'dark',
+                theme3: 'light'
             }
         }
 }

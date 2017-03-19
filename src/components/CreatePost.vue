@@ -42,7 +42,7 @@
             <i-input v-model="createForm.title" placeholer="title"></i-input>
           </Form-item>
           <Form-item>
-            <i-input v-model="createForm.description" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="description..."></i-input>
+            <i-input v-model="createForm.description" type="textarea" placeholder="description..."></i-input>
           </Form-item>
 
           <i-col span="4" align="left">
@@ -60,7 +60,7 @@
             <i-input v-model="createForm.title" placeholer="title"></i-input>
           </Form-item>
 
-          <i-button type="primary">Submit</i-button>
+          <i-button type="primary" @click="createProfile">Submit</i-button>
         </i-form>
 
       </i-col>
@@ -83,13 +83,32 @@
   }
 </style>
 <script>
+  import apiService from '../services/api.service';
     export default {
       data() {
         return {
           locationForm: {},
           createForm: {}
         }
+      },
+      methods: {
+          createProfile() {
+              let obj = this.createForm;
+              obj['Location'] = this.locationForm;
+              obj['Profile'] =   {
+                "firstName": "someFirstName",
+                "lastName": "someLastName",
+                "email": "test@user.com",
+                "points": 300,
+                "popularity": 0.8,
+                "pictureUrl": "//placeholde.it/100x100"
+              };
 
+              apiService.post(obj, 'posts').then(response => {
+
+              });
+              console.log(obj);
+          }
       }
     }
 </script>

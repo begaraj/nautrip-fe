@@ -16,9 +16,9 @@
                 <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
               </Carousel-item>
             </Carousel>
-            <h3 slot="title">Post Title</h3>
+            <h3 slot="title">{{post.title}}</h3>
             <img src="" />
-            <span class="user"><Icon type="person"></Icon> Username</span><br>
+            <span class="user"><Icon type="person"></Icon> {{post.Profile.firstName}} {{post.Profile.lastName}} </span><br>
             <span class="location"><Icon type="location"></Icon> New York City, Downtown, USA</span>
             <p>{{post.description}}</p>
             <Rate v-model="value"></Rate>
