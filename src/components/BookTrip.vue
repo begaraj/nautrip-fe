@@ -1,32 +1,46 @@
 <template>
+  <div>
 
-   <div style="background:#eee;padding: 20px">
-        <Card v-for="post in posts" :key="post.id" :bordered="false">
-            <Carousel>
-              <Carousel-item>
-                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
-              </Carousel-item>
-              <Carousel-item>
-                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
-              </Carousel-item>
-              <Carousel-item>
-                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
-              </Carousel-item>
-              <Carousel-item>
-                <div class="demo-carousel"><img src="http://placehold.it/350x150" alt=""></div>
-              </Carousel-item>
-            </Carousel>
-            <h3 slot="title">{{post.title}}</h3>
-            <img src="" />
-            <span class="user"><Icon type="person"></Icon> {{post.Profile.firstName}} {{post.Profile.lastName}} </span><br>
-            <span class="location"><Icon type="location"></Icon> New York City, Downtown, USA</span>
-            <p>{{post.description}}</p>
-            <Rate v-model="value"></Rate>
-            <i-button type="ghost" icon="share">Share</i-button>
-            <i-button type="primary" icon="android-compass" size="large">Please thake me there!</i-button>
-            <h4>Show Comments</h4>
-        </Card>
-    </div>
+    <Steps :current="0">
+      <Step title="Choose your plan" content="date and traveling method"></Step>
+      <Step title="Adjust" content="adjust your plan"></Step>
+      <Step title="Choose option" content="choose a option provided by us"></Step>
+      <Step title="Finish" content="You are ready to go!"></Step>
+    </Steps>
+    <br>
+    <br>
+    <br>
+  <Row type="flex" justfiy="space-around">
+    <i-col span="12">
+      <i-button type="primary" size="large">Choose recommended weather</i-button>
+    </i-col>
+    <i-col span="12">
+      <Date-picker type="date" placeholder="start date" style="width: 200px"></Date-picker>
+      <br>
+      <br>
+      <Date-picker type="date" placeholder="end date" style="width: 200px"></Date-picker>
+    </i-col>
+  </Row>
+
+    <br>
+    <br>
+    <br>
+
+  <Row type="flex" justify="space-around">
+    <i-col><i-button type="primary" shape="circle" size="large">$</i-button></i-col>
+    <i-col><i-button type="primary" shape="circle" size="large">$$</i-button></i-col>
+    <i-col><i-button type="primary" shape="circle" size="large">$$$</i-button></i-col>
+  </Row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <Row>
+      <router-link to="/book-trip-2">
+      <i-button type="primary" size="large">Next</i-button>
+      </router-link>
+    </Row>
+  </div>
 </template>
 <script>
     import apiService from "../services/api.service"

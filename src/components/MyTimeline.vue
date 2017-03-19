@@ -23,7 +23,9 @@
             <p>{{post.description}}</p>
             <Rate v-model="value"></Rate>
             <i-button type="ghost" icon="share">Share</i-button>
-            <i-button type="primary" icon="android-compass" size="large">Please thake me there!</i-button>
+            <router-link to="/book-trip">
+              <i-button type="primary" icon="android-compass" size="large">Please thake me there!</i-button>
+            </router-link>
             <h4>Show Comments</h4>
         </Card>
     </div>

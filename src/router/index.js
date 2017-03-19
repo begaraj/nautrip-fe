@@ -7,6 +7,8 @@ import MyTimeline from '@/components/MyTimeline'
 import Profile from '@/components/Profile'
 import CreatePost from '@/components/CreatePost'
 import BookTrip from '@/components/BookTrip'
+import BookTrip2 from '@/components/BookTrip2'
+import BookTrip3 from '@/components/BookTrip3'
 
 Vue.use(Router);
 
@@ -46,6 +48,16 @@ export default new Router({
       path: '/book-trip',
       name: 'BookTrip',
       component: BookTrip
+    },
+    {
+      path: '/book-trip-2',
+      name: 'BookTrip2',
+      component: BookTrip2
+    },
+    {
+      path: '/book-trip-3',
+      name: 'BookTrip3',
+      component: BookTrip3
     }
 
   ]

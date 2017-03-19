@@ -9,11 +9,18 @@
     <Row>
       <i-col span="12" align="right">
         <div>
+          <Spin v-show="mapLoading" size="large"></Spin>
           <gmap-map
-            :center="{lat:10, lng:10}"
-            :zoom="7"
+            :center="currentPosition"
+            :zoom="16"
             map-type-id="roadmap"
             style="width: 500px; height: 300px">
+            <gmap-marker
+              :position="currentPosition"
+              :clickable="true"
+              :draggable="true"
+              @click="center=m.position"
+            ></gmap-marker>
           </gmap-map>
         </div>
 
@@ -30,7 +37,7 @@
           <Form-item>
             <i-input v-model="locationForm.street" placeholder="Street"></i-input>
           </Form-item>
-          <i-button type="primary" shape="circle" icon="location"></i-button>
+          <i-button type="primary" shape="circle" icon="location" @click="getCurrentPosition"></i-button>
         </i-form>
       </i-col>
     </Row>
@@ -88,7 +95,9 @@
       data() {
         return {
           locationForm: {},
-          createForm: {}
+          createForm: {},
+          currentPosition: {lat: 47.4321575, lng: 9.3733733},
+          mapLoading: false
         }
       },
       methods: {
@@ -108,7 +117,17 @@
 
               });
               console.log(obj);
-          }
+          },
+
+        getCurrentPosition() {
+          this.mapLoading = true;
+          navigator.geolocation.getCurrentPosition((position) => {
+              console.log(position);
+              this.currentPosition.lat = position.coords.latitude;
+              this.currentPosition.lng = position.coords.longitude;
+              this.mapLoading = false;
+          });
+        }
       }
     }
 </script>
