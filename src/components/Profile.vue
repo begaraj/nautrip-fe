@@ -32,8 +32,11 @@
           :data="[8,10,20,14,20, 24]" :width="400" :height="200"
           :datalabel="'Popularity'"
           :fill="true"></chartjs-line>
+          <h3>My awards:</h3>
+          <img src="https://s.w.org/images/core/emoji/2.2.1/svg/1f3c6.svg" alt="" width="48">
         </div>
       </i-col>
+
     </Row>
 
   </div>
