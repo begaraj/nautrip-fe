@@ -17,12 +17,12 @@
 
     <Row type="flex" justify="center">
       <i-col span="7">
-      <gmap-map
-        :center="{lat:10, lng:10}"
-        :zoom="7"
-        map-type-id="roadmap"
-        style="width: 100%; height: 300px">
-      </gmap-map>
+        <gmap-map
+          :center="{lat:10, lng:10}"
+          :zoom="7"
+          map-type-id="roadmap"
+          style="width: 100%; height: 300px">
+        </gmap-map>
       </i-col>
       <i-col span="9" align="left">
         <div class="margin-left">
@@ -46,6 +46,7 @@
   .margin-left {
     padding-left: 2em;
   }
+
 </style>
 <script>
 import VueCharts from 'hchs-vue-charts';

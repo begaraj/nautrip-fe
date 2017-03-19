@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block; position:absolute; bottom:0;"> 
+    <Menu mode="horizontal" :theme="theme1" active-key="1" style="width:100%; text-align:center; display:block; position:relative; bottom:0;">
         <Menu-item key="1" name="menuItem" >
             <Icon size="20" type="android-more-vertical"></Icon>
             My Timeline

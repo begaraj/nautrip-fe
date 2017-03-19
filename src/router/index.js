@@ -5,8 +5,9 @@ import Login from '@/components/Login'
 import Registration from '@/components/Registration'
 import MyTimeline from '@/components/MyTimeline'
 import Profile from '@/components/Profile'
+import CreatePost from '@/components/CreatePost'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -34,6 +35,11 @@ export default new Router({
       path: '/profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/create-post',
+      name: 'CreatePost',
+      component: CreatePost
     }
   ]
 })

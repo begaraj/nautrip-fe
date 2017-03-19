@@ -1,7 +1,7 @@
 <template>
 
    <div style="background:#eee;padding: 20px">
-        <Card v-for="post in posts" :bordered="false">
+        <Card v-for="post in posts" :key="post.id" :bordered="false">
             <h3 slot="title">Post Title</h3>
             <img src="" />
             <span class="user"><Icon type="person"></Icon> Username</span><br>
@@ -11,8 +11,6 @@
             <i-button type="ghost" icon="share">Share</i-button>
             <i-button type="primary" icon="android-compass" size="large">Please thake me there!</i-button>
             <h4>Show Comments</h4>
-
-
         </Card>
     </div>
 </template>
